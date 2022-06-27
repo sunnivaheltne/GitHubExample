@@ -4,14 +4,11 @@
     {
         static void Main(string[] args)
         {
-            //OPPGAVE 8
+            Console.WriteLine("Hello, Academy!");
+            Console.WriteLine("What's your name?");
+            var name = Console.ReadLine();
 
-            Console.WriteLine("Skriv inn fem navn ");
-            Console.WriteLine("Ser du dette?");
-
-
-
-
+            Console.WriteLine($"Your name is {name}");
         }
     }
 }
