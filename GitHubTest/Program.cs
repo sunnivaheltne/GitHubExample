@@ -1,17 +1,15 @@
 ﻿namespace GitHubTest
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //OPPGAVE 8
+            Fraction fraction = new(1, 2);
+            Fraction fraction2 = new(1, 3);
 
-            Console.WriteLine("Skriv inn fem navn ");
-            Console.WriteLine("Ser du dette?");
+            Fraction sum = fraction.Add(fraction2);
 
-
-
-
+            Console.WriteLine($"{fraction} + {fraction2} = {sum}");
         }
     }
 }
