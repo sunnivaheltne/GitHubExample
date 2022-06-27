@@ -21,6 +21,9 @@
 
             Fraction sum4 = fraction1.Division(fraction2);
             Console.WriteLine($"{fraction1} / {fraction2} = {sum4}");
+
+            bool sum5 = fraction1.Equals(fraction2);
+            Console.WriteLine($"Is {fraction1} equal to {fraction2}? {sum5}.");
         }
     }
 }
