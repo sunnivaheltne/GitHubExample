@@ -30,5 +30,34 @@ namespace GitHubTest
 
             return sum;
         }
+
+        public Fraction Subtract(Fraction fraction)
+        {
+            int sumNumerator = (Numerator * fraction.Denominator) - (fraction.Numerator * Denominator);
+            int sumDenominator = Denominator * fraction.Denominator;
+
+            Fraction sum = new(sumNumerator, sumDenominator);
+
+            return sum;
+        }
+
+        public Fraction Multiply(Fraction fraction)
+        {
+            int sumNumerator = Numerator * fraction.Numerator;
+            int sumDenominator = Denominator * fraction.Denominator;
+
+            Fraction sum = new(sumNumerator, sumDenominator);
+
+            return sum;
+        }
+        public Fraction Division(Fraction fraction)
+        {
+            int sumNumerator = Numerator * fraction.Denominator;
+            int sumDenominator = Denominator * fraction.Numerator;
+
+            Fraction sum = new(sumNumerator, sumDenominator);
+
+            return sum;
+        }
     }
 }
