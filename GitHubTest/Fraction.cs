@@ -59,5 +59,16 @@ namespace GitHubTest
 
             return sum;
         }
+
+        public bool Equals(Fraction fraction)
+        {
+            var fractions = false;
+
+            if (Numerator == fraction.Numerator && Denominator == fraction.Denominator )
+            {
+                fractions = true;
+            }
+            return fractions;
+        }
     }
 }
