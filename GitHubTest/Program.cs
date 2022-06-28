@@ -7,6 +7,13 @@
             Fraction fraction1 = new(1, 2);
             Fraction fraction2 = new(1, 3);
 
+            Fraction sumMultiply = fraction1 * fraction2;
+            Console.WriteLine($"Operator overload: The sum of {fraction1} * {fraction2} = {sumMultiply}\n");
+
+            bool sumEquals = fraction1 == fraction2;
+            Console.WriteLine($"Operator overload: Is {fraction1} equal to {fraction2}? {sumEquals}\n");
+
+            #region Fraction methods
             Fraction sum = fraction1.Add(fraction2);
             Console.WriteLine($"{fraction1} + {fraction2} = {sum}");
 
@@ -27,6 +34,8 @@
 
             bool sum6 = fraction1.GreaterThan(fraction2);
             Console.WriteLine($"Is {fraction1} greater than {fraction2}? {sum6}.");
+            #endregion
         }
+        
     }
 }

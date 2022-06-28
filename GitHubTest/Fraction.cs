@@ -11,7 +11,7 @@ namespace GitHubTest
         public int Numerator { get; private set; }
         public int Denominator { get; private set; }
 
-        public Fraction (int numerator = 0, int denominator = 1)
+        public Fraction(int numerator = 0, int denominator = 1)
         {
             Numerator = numerator;
             Denominator = denominator;
@@ -22,6 +22,7 @@ namespace GitHubTest
             return $"{Numerator}/{Denominator}";
         }
 
+        #region Fraction methods
         public Fraction Add(Fraction fraction)
         {
             int sumNumerator = (Numerator * fraction.Denominator) + (fraction.Numerator * Denominator);
@@ -64,11 +65,23 @@ namespace GitHubTest
         {
             var fractions = false;
 
-            if (Numerator == fraction.Numerator && Denominator == fraction.Denominator )
+            if (Numerator == fraction.Numerator && Denominator == fraction.Denominator)
             {
                 fractions = true;
             }
             return fractions;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Fraction)
+            {
+                return Equals((Fraction)obj);
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool GreaterThan(Fraction fraction)
@@ -97,5 +110,42 @@ namespace GitHubTest
             }
             return fractions;
         }
+        #endregion
+
+        #region Operator overloads
+        public static Fraction operator +(Fraction left, Fraction right)    // operator overloads (override)
+        {
+            return left.Add(right);
+        }
+
+        public static Fraction operator *(Fraction left, Fraction right)
+        {
+            return left.Multiply(right);
+        }
+
+        public static Fraction operator -(Fraction left, Fraction right)
+        {
+            return left.Subtract(right);    
+        }
+
+        public static bool operator !=(Fraction left, Fraction right)
+        {
+            return !(left.Equals(right));
+        }
+
+        public static bool operator ==(Fraction left, Fraction right)
+        { 
+            return left.Equals(right); 
+        }      
+        public static bool operator <(Fraction left, Fraction right)
+        {
+            return left.LesserThan(right);
+        }
+
+        public static bool operator >(Fraction left, Fraction right)
+        {
+            return left.GreaterThan(right);
+        }
+        #endregion
     }
 }
