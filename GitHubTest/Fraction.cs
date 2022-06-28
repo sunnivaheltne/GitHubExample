@@ -70,5 +70,32 @@ namespace GitHubTest
             }
             return fractions;
         }
+
+        public bool GreaterThan(Fraction fraction)
+        {
+            var fractions = false;
+
+            int teller1 = Numerator * fraction.Denominator;
+            int teller2 = fraction.Numerator * Denominator;
+
+            if (teller1 > teller2)
+            {
+                fractions = true;
+            }
+            return fractions;
+        }
+        public bool LesserThan(Fraction fraction)
+        {
+            var fractions = false;
+
+            int teller1 = Numerator * fraction.Denominator;
+            int teller2 = fraction.Numerator * Denominator;
+
+            if (teller1 < teller2)
+            {
+                fractions = true;
+            }
+            return fractions;
+        }
     }
 }

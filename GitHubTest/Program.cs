@@ -24,6 +24,9 @@
 
             bool sum5 = fraction1.Equals(fraction2);
             Console.WriteLine($"Is {fraction1} equal to {fraction2}? {sum5}.");
+
+            bool sum6 = fraction1.GreaterThan(fraction2);
+            Console.WriteLine($"Is {fraction1} greater than {fraction2}? {sum6}.");
         }
     }
 }
